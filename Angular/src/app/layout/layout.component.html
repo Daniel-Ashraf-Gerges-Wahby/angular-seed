@@ -1,0 +1,284 @@
+<header class="header-wrapper header-wrapper--home">
+  <div class="container">
+    <!-- Logo link-->
+    <a href='index.html' class="logo">
+      <img alt='logo' src="assets/images/logo.png">
+    </a>
+
+    <!-- Main website navigation-->
+    <nav id="navigation-box">
+      <!-- Toggle for mobile menu mode -->
+      <a href="#" (click)="menu()" id="navigation-toggle" [ngClass]="{'open-menu': mobile_menu}">
+        <span class="menu-icon">
+          <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
+            <span class="lines"></span>
+          </span>
+        </span>
+      </a>
+
+      <!-- Link navigation -->
+      <ul id="navigation" [ngClass]="{'showen-c': mobile_menu, 'hidden-c': !mobile_menu}">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="page-elements.html">Movies</a>
+        </li>
+        <li>
+          <a href="page-elements.html">Cinemas</a>
+        </li>
+        <li>
+          <a href="gallery-four.html">Contact</a>
+        </li>
+        <li>
+          <span class="sub-nav-toggle plus"></span>
+          <a href="#">Mega menu
+            <i class="fas fa-angle-down"></i>
+          </a>
+          <ul class="mega-menu container">
+            <li class="col-md-3 mega-menu__coloum">
+              <h4 class="mega-menu__heading">Now in the cinema</h4>
+              <ul class="mega-menu__list">
+                <li class="mega-menu__nav-item">
+                  <a href="#">The Counselor</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Bad Grandpa</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Blue Is the Warmest Color</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Capital</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Spinning Plates</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Bastards</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
+              <ul class="mega-menu__list">
+                <li class="mega-menu__nav-item">
+                  <a href="#">Gravity</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Captain Phillips</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Carrie</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Cloudy with a Chance of Meatballs 2</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="col-md-3 mega-menu__coloum">
+              <h4 class="mega-menu__heading">Ending soon</h4>
+              <ul class="mega-menu__list">
+                <li class="mega-menu__nav-item">
+                  <a href="#">Escape Plan</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Rush</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Prisoners</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Enough Said</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">The Fifth Estate</a>
+                </li>
+                <li class="mega-menu__nav-item">
+                  <a href="#">Runner Runner</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="col-md-3 mega-menu__coloum mega-menu__coloum--outheading">
+              <ul class="mega-menu__list">
+                <li class="mega-menu__nav-item">
+                  <a href="#">Insidious: Chapter 2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Additional header buttons / Auth and direct link to booking-->
+    <div class="control-panel">
+      <div (click)="usermenu()" class="auth auth--home">
+        <div class="auth__show">
+          <span class="auth__image">
+            <img alt="" src="assets/images/client-photo/auth.png">
+          </span>
+        </div>
+        <a href="#" class="btn btn--sign btn--singin">
+          me
+        </a>
+        <ul [ngClass]="{'open-function': active}" class="auth__function">
+          <li>
+            <a href="#" class="auth__function-item">Watchlist</a>
+          </li>
+          <li>
+            <a href="#" class="auth__function-item">Booked tickets</a>
+          </li>
+          <li>
+            <a href="#" class="auth__function-item">Discussion</a>
+          </li>
+          <li>
+            <a href="#" class="auth__function-item">Settings</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#" (click)="login()" class="btn btn--sign btn--singin">
+        signin
+      </a>
+
+      <a href="#" class="btn btn-md btn--warning btn--book btn-control--home login-window">Book a ticket</a>
+    </div>
+
+  </div>
+</header>
+
+<router-outlet></router-outlet>
+
+
+
+<div class="clearfix"></div>
+
+<div class="clear-fix">
+  <footer class="footer-wrapper">
+    <section class="container">
+      <div class="col-xs-4 col-md-2 footer-nav">
+        <ul class="nav-link">
+          <li>
+            <a href="#" class="nav-link__item">Cities</a>
+          </li>
+          <li>
+            <a href="movie-list-left.html" class="nav-link__item">Movies</a>
+          </li>
+          <li>
+            <a href="trailer.html" class="nav-link__item">Trailers</a>
+          </li>
+          <li>
+            <a href="rates-left.html" class="nav-link__item">Rates</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-4 col-md-2 footer-nav">
+        <ul class="nav-link">
+          <li>
+            <a href="coming-soon.html" class="nav-link__item">Coming soon</a>
+          </li>
+          <li>
+            <a href="cinema-list.html" class="nav-link__item">Cinemas</a>
+          </li>
+          <li>
+            <a href="offers.html" class="nav-link__item">Best offers</a>
+          </li>
+          <li>
+            <a href="news-left.html" class="nav-link__item">News</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-4 col-md-2 footer-nav">
+        <ul class="nav-link">
+          <li>
+            <a href="#" class="nav-link__item">Terms of use</a>
+          </li>
+          <li>
+            <a href="gallery-four.html" class="nav-link__item">Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link__item">Contacts</a>
+          </li>
+          <li>
+            <a href="page-elements.html" class="nav-link__item">Shortcodes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="footer-info">
+          <p class="heading-special--small">A.Movie
+            <br>
+            <span class="title-edition">in the social media</span>
+          </p>
+
+          <div class="social">
+            <a href='#' class="social__variant fa fa-facebook"></a>
+            <a href='#' class="social__variant fa fa-twitter"></a>
+            <a href='#' class="social__variant fa fa-vk"></a>
+            <a href='#' class="social__variant fa fa-instagram"></a>
+            <a href='#' class="social__variant fa fa-tumblr"></a>
+            <a href='#' class="social__variant fa fa-pinterest"></a>
+          </div>
+
+          <div class="clearfix"></div>
+          <p class="copy">&copy; A.Movie, 2013. All rights reserved. Done by Olia Gozha</p>
+        </div>
+      </div>
+    </section>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Overlay -->
+
+<div [ngClass]="{'open': overlay, 'close': !overlay}" class="overlay overlay-hugeinc">
+
+  <section class="container">
+
+    <div class="col-sm-4 col-sm-offset-4">
+      <button (click)="login()" type="button" class="overlay-close">Close</button>
+      <form id="login-form" class="login" method='get' novalidate=''>
+        <p class="login__title">sign in
+          <br>
+          <span class="login-edition">WELCOME TO CINEMA APP</span>
+        </p>
+
+        <div class="social social--colored">
+          <a href='#' class="social__variant fa fa-facebook"></a>
+          <a href='#' class="social__variant fa fa-twitter"></a>
+          <a href='#' class="social__variant fa fa-tumblr"></a>
+        </div>
+
+        <p class="login__tracker">or</p>
+
+        <div class="field-wrap">
+          <input type='email' placeholder='Email' name='user-email' class="login__input">
+          <input type='password' placeholder='Password' name='user-password' class="login__input">
+
+          <input type='checkbox' id='#informed' class='login__check styled'>
+          <label for='#informed' class='login__check-info'>remember me</label>
+        </div>
+
+        <div class="login__control">
+          <button type='submit' class="btn btn-md btn--warning btn--wider">sign in</button>
+          <a href="#" class="login__tracker form__tracker">Forgot password?</a>
+        </div>
+      </form>
+    </div>
+
+  </section>
+</div>
